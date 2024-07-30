@@ -1,13 +1,10 @@
 @file:Suppress("PropertyName", "SpellCheckingInspection")
 
-import io.izzel.taboolib.gradle.BUKKIT_ALL
-import io.izzel.taboolib.gradle.UNIVERSAL
-
 taboolib {
     description {
         name(rootProject.name)
         contributors {
-            name("Bkm016")
+            name("liangcha385")
         }
     }
 }

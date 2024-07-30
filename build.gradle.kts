@@ -2,12 +2,22 @@
 
 import io.izzel.taboolib.gradle.BUKKIT_ALL
 import io.izzel.taboolib.gradle.UNIVERSAL
+import io.izzel.taboolib.gradle.VELOCITY
+import io.izzel.taboolib.gradle.BUNGEE
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
     id("io.izzel.taboolib") version "2.0.11"
-    id("org.jetbrains.kotlin.jvm") version "1.8.22"
+    id("org.jetbrains.kotlin.jvm") version "1.9.22"
+}
+
+kotlin {
+    sourceSets.all {
+        languageSettings {
+            languageVersion = "2.0"
+        }
+    }
 }
 
 subprojects {
@@ -18,7 +28,7 @@ subprojects {
     // TabooLib 配置
     taboolib {
         env {
-            install(UNIVERSAL, BUKKIT_ALL)
+            install(UNIVERSAL, BUKKIT_ALL, VELOCITY, BUNGEE)
         }
         version { taboolib = "6.1.1-beta17" }
     }
